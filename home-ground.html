@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Home Ground Advantage</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <link rel ="stylesheet" type ="text/css" href ="home-ground.css" />
+    </head>
+    <body>
+        <div class="container text-center">
+            
+            <!--Headers and Text-->
+            <h1>
+                The Home Ground Advantage in Major Sport Competitions</h1>
+            <blockquote id="text" class="trans"></blockquote>
+            <div class="row">
+                <h2 id="header" class="trans">
+                    Home Ground Win %</h2>
+            </div>
+
+            <!--Gauges-->
+            <div class="row">
+                <a href="#"><div id ="g1" class="col-sm-4 home trans gauge" onmouseover="hover(this)" 
+                onmouseout="over(this)" onclick="clicked(this)"></div></a>
+                <a href="#"><div id ="g2" class="col-sm-4 home trans gauge" onmouseover="hover(this)" 
+                onmouseout="over(this)" onclick="clicked(this)"></div></a>
+                <a href="#"><div id ="g3" class="col-sm-4 home trans gauge" onmouseover="hover(this)" 
+                onmouseout="over(this)" onclick="clicked(this)"></div></a>
+            </div> 
+
+            <!--Chart and Controls-->
+            <div class="row">   
+                <div id="control" style="display:none;" class="col-sm-2 sidenav">
+                    <ul class="nav nav-pills nav-stacked">
+                      <li onclick="returnHome(this)"><a href="#">Back</a></li>
+                      <li id="sortH" onclick="update(this)"><a href="#">Sort by Home Wins</a></li>
+                      <li id="sortT" onclick="update(this)"><a href="#">Sort by Total Wins</a></li>
+                      <li id="sortA" onclick="update(this)"><a href="#">Sort Ascending</a></li>
+                      <li id="sortD" onclick="update(this)"><a href="#">Sort Descending</a></li>
+                      <li id="venue" onclick="update(this)"><a href="#">Venues</a></li>
+                      <li id="team" onclick="update(this)" style="display:none;"><a href="#">Teams</a></li>
+                    </ul><br>
+                    
+                </div>
+                <div id="chart" class="col-sm-10"></div>
+            </div>
+        </div>
+        
+        <script src="https://d3js.org/d3.v4.min.js"></script>
+        <script type="text/javascript" src="home-ground.js"></script>
+        
+    </body>
+</html>
